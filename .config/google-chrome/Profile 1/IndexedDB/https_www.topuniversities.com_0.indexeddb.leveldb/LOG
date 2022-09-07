@@ -1,0 +1,37 @@
+2022/09/04-18:46:11.016 5d4b Reusing MANIFEST /home/zhi/.config/google-chrome/Profile 1/IndexedDB/https_www.topuniversities.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/04-18:46:11.017 5d4b Recovering log #4
+2022/09/04-18:46:11.017 5d4b Reusing old log /home/zhi/.config/google-chrome/Profile 1/IndexedDB/https_www.topuniversities.com_0.indexeddb.leveldb/000004.log 
+2022/09/04-18:46:11.029 5d49 Level-0 table #8: started
+2022/09/04-18:46:11.031 5d49 Level-0 table #8: 1763 bytes OK
+2022/09/04-18:46:11.039 5d49 Delete type=0 #4
+2022/09/04-18:46:11.040 5d49 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2022/09/04-21:37:23.711 13a67 Level-0 table #10: started
+2022/09/04-21:37:23.713 13a67 Level-0 table #10: 891 bytes OK
+2022/09/04-21:37:23.718 13a67 Delete type=0 #7
+2022/09/04-21:37:23.718 13a67 Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at '\x00\x05\x00\x00\x05' @ 165 : 1
+2022/09/04-21:37:23.718 13a67 Compacting 1@0 + 1@1 files
+2022/09/04-21:37:23.720 13a67 Generated table #11@0: 53 keys, 1330 bytes
+2022/09/04-21:37:23.720 13a67 Compacted 1@0 + 1@1 files => 1330 bytes
+2022/09/04-21:37:23.728 13a67 compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/09/04-21:37:23.728 13a67 Delete type=2 #10
+2022/09/04-21:37:23.728 13a67 Manual compaction at level-0 from '\x00\x05\x00\x00\x05' @ 165 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)
+2022/09/04-22:23:36.724 189e8 Level-0 table #13: started
+2022/09/04-22:23:36.727 189e8 Level-0 table #13: 848 bytes OK
+2022/09/04-22:23:36.731 189e8 Delete type=2 #8
+2022/09/04-22:23:36.731 189e8 Delete type=0 #9
+2022/09/04-22:23:36.732 189e8 Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x01\x13\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x00u\x00n\x00d\x00e\x00f\x00i\x00n\x00e\x00d' @ 189 : 1
+2022/09/04-22:23:36.732 189e8 Compacting 1@0 + 1@1 files
+2022/09/04-22:23:36.735 189e8 Generated table #14@0: 60 keys, 1295 bytes
+2022/09/04-22:23:36.735 189e8 Compacted 1@0 + 1@1 files => 1295 bytes
+2022/09/04-22:23:36.740 189e8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/09/04-22:23:36.740 189e8 Delete type=2 #11
+2022/09/04-22:23:36.740 189e8 Delete type=2 #13
+2022/09/04-22:23:36.740 189e8 Manual compaction at level-0 from '\x00\x03\x01\x02\x01\x13\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x00u\x00n\x00d\x00e\x00f\x00i\x00n\x00e\x00d' @ 189 : 1 .. (end); will stop at (end)
+2022/09/04-22:23:36.741 189e8 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x01\x13\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x00u\x00n\x00d\x00e\x00f\x00i\x00n\x00e\x00d' @ 189 : 1
+2022/09/04-22:23:36.741 189e8 Compacting 1@1 + 1@2 files
+2022/09/04-22:23:36.743 189e8 Generated table #15@1: 34 keys, 1012 bytes
+2022/09/04-22:23:36.743 189e8 Compacted 1@1 + 1@2 files => 1012 bytes
+2022/09/04-22:23:36.748 189e8 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/09/04-22:23:36.748 189e8 Delete type=2 #5
+2022/09/04-22:23:36.748 189e8 Delete type=2 #14
+2022/09/04-22:23:36.749 189e8 Manual compaction at level-1 from '\x00\x03\x01\x02\x01\x13\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x00u\x00n\x00d\x00e\x00f\x00i\x00n\x00e\x00d' @ 189 : 1 .. (end); will stop at (end)

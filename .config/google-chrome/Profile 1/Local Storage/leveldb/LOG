@@ -1,0 +1,15 @@
+2022/09/06-22:09:19.354 3 Reusing MANIFEST /home/zhi/.config/google-chrome/Profile 1/Local Storage/leveldb/MANIFEST-000001
+2022/09/06-22:09:19.355 3 Recovering log #74
+2022/09/06-22:09:19.355 3 Reusing old log /home/zhi/.config/google-chrome/Profile 1/Local Storage/leveldb/000074.log 
+2022/09/06-22:37:30.467 3 Level-0 table #78: started
+2022/09/06-22:37:30.482 3 Level-0 table #78: 53795 bytes OK
+2022/09/06-22:37:30.509 3 Delete type=0 #74
+2022/09/06-22:37:30.510 3 Compacting 4@0 + 1@1 files
+2022/09/06-22:37:30.531 3 Generated table #79@0: 1090 keys, 708196 bytes
+2022/09/06-22:37:30.532 3 Compacted 4@0 + 1@1 files => 708196 bytes
+2022/09/06-22:37:30.538 3 compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/09/06-22:37:30.540 3 Delete type=2 #68
+2022/09/06-22:37:30.540 3 Delete type=2 #70
+2022/09/06-22:37:30.540 3 Delete type=2 #73
+2022/09/06-22:37:30.540 3 Delete type=2 #75
+2022/09/06-22:37:30.541 3 Delete type=2 #78

@@ -1,0 +1,6 @@
+2022/09/04-23:08:01.421 1d033 Reusing MANIFEST /home/zhi/.config/google-chrome/Profile 1/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/09/04-23:08:01.421 1d033 Recovering log #3
+2022/09/04-23:08:01.429 1d033 Reusing old log /home/zhi/.config/google-chrome/Profile 1/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000003.log 
+2022/09/04-23:08:16.794 1d5a4 Level-0 table #5: started
+2022/09/04-23:08:16.832 1d5a4 Level-0 table #5: 1949084 bytes OK
+2022/09/04-23:08:16.838 1d5a4 Delete type=0 #3
