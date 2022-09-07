@@ -1,2 +1,0 @@
-# dotfiles
-Store my dotfiles
