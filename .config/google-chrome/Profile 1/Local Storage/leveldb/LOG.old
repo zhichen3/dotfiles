@@ -1,9 +1,0 @@
-2022/09/06-18:46:41.635 3 Reusing MANIFEST /home/zhi/.config/google-chrome/Profile 1/Local Storage/leveldb/MANIFEST-000001
-2022/09/06-18:46:41.645 3 Recovering log #69
-2022/09/06-18:46:41.687 3 Reusing old log /home/zhi/.config/google-chrome/Profile 1/Local Storage/leveldb/000069.log 
-2022/09/06-18:56:17.766 4 Level-0 table #73: started
-2022/09/06-18:56:17.777 4 Level-0 table #73: 18513 bytes OK
-2022/09/06-18:56:17.784 4 Delete type=0 #69
-2022/09/06-18:57:05.812 4 Level-0 table #75: started
-2022/09/06-18:57:05.821 4 Level-0 table #75: 17458 bytes OK
-2022/09/06-18:57:05.828 4 Delete type=0 #72

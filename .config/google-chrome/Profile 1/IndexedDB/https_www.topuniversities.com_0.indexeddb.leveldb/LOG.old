@@ -1,6 +1,0 @@
-2022/09/04-18:36:52.986 4ff3 Creating DB /home/zhi/.config/google-chrome/Profile 1/IndexedDB/https_www.topuniversities.com_0.indexeddb.leveldb since it was missing.
-2022/09/04-18:36:52.993 4ff3 Reusing MANIFEST /home/zhi/.config/google-chrome/Profile 1/IndexedDB/https_www.topuniversities.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/09/04-18:36:53.010 4ff4 Level-0 table #5: started
-2022/09/04-18:36:53.013 4ff4 Level-0 table #5: 1260 bytes OK
-2022/09/04-18:36:53.019 4ff4 Delete type=0 #3
-2022/09/04-18:36:53.019 4a61 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

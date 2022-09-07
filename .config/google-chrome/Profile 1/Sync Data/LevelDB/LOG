@@ -1,6 +1,0 @@
-2022/09/06-22:09:19.359 13b7a Reusing MANIFEST /home/zhi/.config/google-chrome/Profile 1/Sync Data/LevelDB/MANIFEST-000001
-2022/09/06-22:09:19.359 13b7a Recovering log #65
-2022/09/06-22:09:19.361 13b7a Reusing old log /home/zhi/.config/google-chrome/Profile 1/Sync Data/LevelDB/000065.log 
-2022/09/06-22:09:24.752 13ba2 Level-0 table #70: started
-2022/09/06-22:09:24.763 13ba2 Level-0 table #70: 113487 bytes OK
-2022/09/06-22:09:24.768 13ba2 Delete type=0 #65
