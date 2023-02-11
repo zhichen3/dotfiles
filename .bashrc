@@ -35,11 +35,18 @@ export PF_COL1=3
 export PF_COL2=8
 export PF_COL3=5
 export EDITOR=/usr/bin/emacs
-export PF_ASCII=OpenBSD
+export PF_ASCII=linux
 export PF_INFO="ascii title os host editor shell uptime memory palette"
 export PF_ALIGN=""
 
 export AMREX_HOME=~/Github/amrex
+export MICROPHYSICS_HOME=~/Github/Microphysics
 
 # For managing dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/Github/dotfiles --work-tree=$HOME"
+
+# Load mpi
+module load mpi/mpich-$arch
+
+# set emacs color
+export TERM=xterm-256color

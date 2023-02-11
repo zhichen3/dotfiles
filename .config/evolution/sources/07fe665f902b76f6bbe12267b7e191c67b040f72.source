@@ -11,6 +11,8 @@ NeedsInitialSetup=true
 MarkSeen=inconsistent
 MarkSeenTimeout=1500
 
+Builtin=false
+
 [Authentication]
 Host=imap.gmail.com
 Method=XOAUTH2
