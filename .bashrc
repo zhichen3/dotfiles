@@ -41,6 +41,7 @@ export PF_ALIGN=""
 
 export AMREX_HOME=~/Github/amrex
 export MICROPHYSICS_HOME=~/Github/Microphysics
+export CASTRO_HOME=~/Github/Castro
 
 # For managing dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/Github/dotfiles --work-tree=$HOME"
@@ -48,5 +49,18 @@ alias config="/usr/bin/git --git-dir=$HOME/Github/dotfiles --work-tree=$HOME"
 # Load mpi
 module load mpi/mpich-$arch
 
-# set emacs color
-export TERM=xterm-256color
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
+        . "/usr/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
