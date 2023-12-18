@@ -51,7 +51,7 @@ alias config="/usr/bin/git --git-dir=$HOME/Github/dotfiles --work-tree=$HOME"
 gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
 # Load mpi
-module load mpi/mpich-$arch
+# module load mpi/mpich-$arch
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
