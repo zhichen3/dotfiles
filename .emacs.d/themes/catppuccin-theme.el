@@ -1057,6 +1057,10 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
 (setq c-basic-offset 4) 
 (c-set-offset 'comment-intro 0)
 
+;; Delete trailing white space
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
