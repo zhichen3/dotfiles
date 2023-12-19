@@ -12,3 +12,51 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(when (not (display-graphic-p))
+  (menu-bar-mode 1)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+  (global-display-line-numbers-mode)
+  (setq column-number-mode t))
+
+;; Set indent to space for c++
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+(setq c-default-style "linux")
+(setq c-basic-offset 4)
+(setq c-basic-indent 4)
+(c-set-offset 'comment-intro 0)
+
+;; Python mode specific settings
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq tab-width 4)
+            (setq python-indent-offset 4))
+          )
+
+
+;; Delete trailing white space
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Enable global whitespace mode
+(global-whitespace-mode 1)
+
+;; Whitespace mode settings
+(progn
+ ;; Make whitespace-mode with very basic background coloring for whitespaces.
+  ;; http://xahlee.info/emacs/emacs/whitespace-mode.html
+  ;; (setq whitespace-style (quote (face spaces tabs newline space-mark tab-mark newline-mark )))
+
+  ;; Make whitespace-mode and whitespace-newline-mode use “¶” for end of line char and “▷” for tab.
+  (setq whitespace-display-mappings
+        ;; all numbers are unicode codepoint in decimal. e.g. (insert-char 182 1)
+        '(
+          (space-mark 32 [183] [46]) ; SPACE 32 「 」, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
+          (newline-mark 10 [8629 10]) ; LINE FEED,
+          (tab-mark 9 [8677 9] [92 9]) ; tab
+          )
+        )
+  )

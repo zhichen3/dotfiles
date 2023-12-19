@@ -1042,25 +1042,6 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                 ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
 
 
-(when (not (display-graphic-p))
-  (menu-bar-mode 1)
-  (tool-bar-mode -1)
-  (scroll-bar-mode -1)
-  (global-display-line-numbers-mode)
-  (setq column-number-mode t))
-
-;; Set indent to space for c++
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
-(setq c-default-style "linux") 
-(setq c-basic-offset 4) 
-(c-set-offset 'comment-intro 0)
-
-;; Delete trailing white space
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
