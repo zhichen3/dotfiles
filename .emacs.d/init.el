@@ -70,3 +70,7 @@
 (load "~/.emacs.d/rainbow-delimiters.el")
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require 'rainbow-delimiters)
+
+;; enable copy and paste to clipboard in emacs nw
+;; Remember to install xclip for this
+(xclip-mode 1)
