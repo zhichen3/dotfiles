@@ -37,7 +37,6 @@
             (setq python-indent-offset 4))
           )
 
-
 ;; Delete trailing white space
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -49,7 +48,6 @@
  ;; Make whitespace-mode with very basic background coloring for whitespaces.
   ;; http://xahlee.info/emacs/emacs/whitespace-mode.html
   ;; (setq whitespace-style (quote (face spaces tabs newline space-mark tab-mark newline-mark )))
-
   ;; Make whitespace-mode and whitespace-newline-mode use “¶” for end of line char and “▷” for tab.
   (setq whitespace-display-mappings
         ;; all numbers are unicode codepoint in decimal. e.g. (insert-char 182 1)
@@ -60,3 +58,14 @@
           )
         )
   )
+
+;; enable upcase-region
+(put 'upcase-region 'disabled nil)
+
+;; load highlight-indent-guides.el and enable by default
+(load "~/.emacs.d/highlight-indent-guides.el")
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+
+;; load rainbow-delimiters.el
+(load "~/.emacs.d/rainbow-delimiters.el")
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
