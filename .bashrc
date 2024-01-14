@@ -44,10 +44,10 @@ export MICROPHYSICS_HOME=~/Github/Microphysics
 export CASTRO_HOME=~/Github/Castro
 
 # For managing dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/Github/dotfiles --work-tree=$HOME"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
 
 # Make terminal title bar disappear
-
 gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
 # Load mpi
@@ -67,4 +67,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
