@@ -1,19 +1,59 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'catppuccin t)
+
+
+; list the packages you want
+(setq package-list '(xclip company eglot))
+
+; list the repositories containing them
+(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+                         ("gnu" . "http://elpa.gnu.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("melpa" . "https://melpa.org/packages/")))
+
+; activate all the packages (in particular autoloads)
+(package-initialize)
+
+; fetch the list of packages available
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
- '(package-selected-packages '(eglot xclip))
+ '(package-selected-packages '(company eglot xclip))
  '(warning-suppress-types '((emacs))))
 (custom-set-faces
+ '(org-level-1 ((t (:family "Cantarell" :height 1.4))))
+ '(org-level-2 ((t (:family "Cantarell" :height 1.3))))
+ '(org-level-3 ((t (:family "Cantarell" :height 1.25))))
+ '(org-level-4 ((t (:family "Cantarell" :height 1.2))))
+ '(org-level-5 ((t (:family "Cantarell" :height 1.15))))
+ '(org-level-6 ((t (:family "Cantarell" :height 1.1))))
+ '(org-level-7 ((t (:family "Cantarell" :height 1.05))))
+ '(org-level-8 ((t (:family "Cantarell" :height 1.0))))
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+(when (display-graphic-p)
+  (menu-bar-mode 1)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+  (global-display-line-numbers-mode)
+  (setq column-number-mode t))
 
 (when (not (display-graphic-p))
   (menu-bar-mode 1)
@@ -67,6 +107,7 @@
 ;; load highlight-indent-guides.el and enable by default
 (load "~/.emacs.d/highlight-indent-guides.el")
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(require 'highlight-indent-guides)
 
 ;; load rainbow-delimiters.el
 (load "~/.emacs.d/rainbow-delimiters.el")
@@ -78,3 +119,88 @@
 (xclip-mode 1)
 
 ;; Remember to install eglot for this
+
+
+
+;; Org mode
+(setq org-ellipsis " ▼")    ;; change the ... behavior for headings
+(setq org-hide-emphasis-markers t) ;; Hide the emphasis markers
+(setq org-pretty-entities t) ;; enable rendering of special symbols
+(setq org-image-actual-width nil)
+
+;; set custom todo keywords
+ (setq org-todo-keywords
+  '((sequence "TODO"
+      "MAYBE"
+      "NEXT"
+      "IN-PROGRESS"
+      "REPORT"
+      "|"
+      "DONE"
+      "DEFERRED"
+      "CANCELLED")))
+
+(setq org-todo-keyword-faces
+      '(("TODO" . "orange")
+        ("MAYBE" . "mistyrose4")
+        ("NEXT" . "blueviolet")
+        ("IN-PROGRESS" . "beige")
+        ("REPORT" . "cyan1")
+        ("DONE" .  "mediumspringgreen")
+        ("DEFERRED" . "chocolate")
+        ("CANCELLED" . "red3"))
+ )
+
+(load "~/.emacs.d/org-bullets.el")
+(require 'org-bullets) ;; Change the bullets
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+;; (load "~/.emacs.d/mixed-pitch.el")
+;; (require 'mixed-pitch)
+;; (add-hook 'org-mode-hook 'mixed-pitch-mode)
+
+;; (setq mixed-pitch-fixed-face-attributes
+;;       '((org-level-1 . (:height 1.2))
+;;         (org-level-2 . (:height 1.1))
+;;         (org-level-3 . (:height 1.05))
+;;         (org-level-4 . (:height 1.0))
+;;         (org-level-5 . (:height 1.1))
+;;         (org-level-6 . (:height 1.1))
+;;         (org-level-7 . (:height 1.1))
+;;         (org-level-8 . (:height 1.1))
+;;         ))
+
+
+;; allow visual line mode, auto break long lines of the current buffer
+(add-hook 'org-mode-hook 'visual-line-mode)
+
+;; Allow text indentation to follow header
+(add-hook 'org-mode-hook 'org-indent-mode)
+
+;; Allow variations in fonts
+;; (add-hook 'org-mode-hook 'variable-pitch-mode)
+
+;; Change hyphens, - to dots
+(font-lock-add-keywords 'org-mode
+                        '(("^ *\\([-]\\) "
+                           (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+
+
+;; (dolist (face '((org-level-1 . 1.2)
+;;                 (org-level-2 . 1.1)
+;;                 (org-level-3 . 1.05)
+;;                 (org-level-4 . 1.0)
+;;                 (org-level-5 . 1.1)
+;;                 (org-level-6 . 1.1)
+;;                 (org-level-7 . 1.1)
+;;                 (org-level-8 . 1.1)))
+;;   (set-face-attribute (car face) nil :font "Cantarell" :weight 'regular :height (cdr face)))
+
+;; ;; ;; Ensure that anything that should be fixed-pitch in Org files appears that way
+;; (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
+;; (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
+;; (set-face-attribute 'org-table nil   :inherit '(shadow fixed-pitch))
+;; (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
+;; (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
+;; (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
+;; (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch))
