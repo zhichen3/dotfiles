@@ -29,23 +29,33 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(global-display-line-numbers-mode t)
  '(inhibit-startup-screen t)
  '(package-selected-packages '(company eglot xclip))
+ '(tool-bar-mode nil)
  '(warning-suppress-types '((emacs))))
 (custom-set-faces
- '(org-level-1 ((t (:family "Cantarell" :height 1.4))))
- '(org-level-2 ((t (:family "Cantarell" :height 1.3))))
- '(org-level-3 ((t (:family "Cantarell" :height 1.25))))
- '(org-level-4 ((t (:family "Cantarell" :height 1.2))))
- '(org-level-5 ((t (:family "Cantarell" :height 1.15))))
- '(org-level-6 ((t (:family "Cantarell" :height 1.1))))
- '(org-level-7 ((t (:family "Cantarell" :height 1.05))))
- '(org-level-8 ((t (:family "Cantarell" :height 1.0))))
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+
+ (set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
+
+ ;; Set the fixed pitch face
+ (set-face-attribute 'fixed-pitch nil :font "Fira Code Retina" :height 120)
+
+ ;; Set the variable pitch face
+ (set-face-attribute 'variable-pitch nil :font "Fira Code" :height 120 :weight 'regular)
+ '(org-level-1 ((t (:family "Fira Code" :height 1.3))))
+ '(org-level-2 ((t (:family "Fira Code" :height 1.2))))
+ '(org-level-3 ((t (:family "Fira Code" :height 1.15))))
+ '(org-level-4 ((t (:family "Fira Code" :height 1.10))))
+ '(org-level-5 ((t (:family "Fira Code" :height 1.05))))
+ '(org-level-6 ((t (:family "Fira Code" :height 1.0))))
+ '(org-level-7 ((t (:family "Fira Code" :height 1.0))))
+ '(org-level-8 ((t (:family "Fira Code" :height 1.0)))))
 
 
 (when (display-graphic-p)
@@ -155,52 +165,13 @@
 (require 'org-bullets) ;; Change the bullets
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
-;; (load "~/.emacs.d/mixed-pitch.el")
-;; (require 'mixed-pitch)
-;; (add-hook 'org-mode-hook 'mixed-pitch-mode)
-
-;; (setq mixed-pitch-fixed-face-attributes
-;;       '((org-level-1 . (:height 1.2))
-;;         (org-level-2 . (:height 1.1))
-;;         (org-level-3 . (:height 1.05))
-;;         (org-level-4 . (:height 1.0))
-;;         (org-level-5 . (:height 1.1))
-;;         (org-level-6 . (:height 1.1))
-;;         (org-level-7 . (:height 1.1))
-;;         (org-level-8 . (:height 1.1))
-;;         ))
-
-
 ;; allow visual line mode, auto break long lines of the current buffer
 (add-hook 'org-mode-hook 'visual-line-mode)
 
 ;; Allow text indentation to follow header
 (add-hook 'org-mode-hook 'org-indent-mode)
 
-;; Allow variations in fonts
-;; (add-hook 'org-mode-hook 'variable-pitch-mode)
-
 ;; Change hyphens, - to dots
 (font-lock-add-keywords 'org-mode
                         '(("^ *\\([-]\\) "
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
-
-
-;; (dolist (face '((org-level-1 . 1.2)
-;;                 (org-level-2 . 1.1)
-;;                 (org-level-3 . 1.05)
-;;                 (org-level-4 . 1.0)
-;;                 (org-level-5 . 1.1)
-;;                 (org-level-6 . 1.1)
-;;                 (org-level-7 . 1.1)
-;;                 (org-level-8 . 1.1)))
-;;   (set-face-attribute (car face) nil :font "Cantarell" :weight 'regular :height (cdr face)))
-
-;; ;; ;; Ensure that anything that should be fixed-pitch in Org files appears that way
-;; (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
-;; (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
-;; (set-face-attribute 'org-table nil   :inherit '(shadow fixed-pitch))
-;; (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
-;; (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
-;; (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
-;; (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch))
