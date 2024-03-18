@@ -1,0 +1,5 @@
+evdev:input:b0003v04B3p301Ee0100-*
+    KEYBOARD_KEY_700e0=capslock
+    KEYBOARD_KEY_70031=backspace
+    KEYBOARD_KEY_7002a=backslash
+    KEYBOARD_KEY_70039=leftctrl

@@ -1,15 +1,16 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'catppuccin t)
 
-
-; list the packages you want
-(setq package-list '(xclip company eglot))
-
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
+                         ("gnu-devel" . "http://elpa.gnu.org/devel/")
                          ("org" . "https://orgmode.org/elpa/")
                          ("melpa" . "https://melpa.org/packages/")))
+
+
+; list the packages you want
+(setq package-list '(xclip company eglot))
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
