@@ -1,0 +1,15 @@
+#X230 7-row Keyboard
+evdev:input:b0011v0001p0001eAB83-*
+    KEYBOARD_KEY_3a=leftctrl
+    KEYBOARD_KEY_1d=capslock
+    KEYBOARD_KEY_2b=backspace
+    KEYBOARD_KEY_0e=backslash
+    KEYBOARD_KEY_d3=home
+    KEYBOARD_KEY_c7=delete
+
+#IBM 8845sk Keyboard
+evdev:input:b0003v04B3p301Ee0100-*
+    KEYBOARD_KEY_700e0=capslock
+    KEYBOARD_KEY_70031=backspace
+    KEYBOARD_KEY_7002a=backslash
+    KEYBOARD_KEY_70039=leftctrl
