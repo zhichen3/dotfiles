@@ -48,13 +48,13 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
 # Make terminal title bar disappear
-gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
+# gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
 
 # Load mpi
 # module load mpi/mpich-$arch
 
 # change terminal prompt
-export PS1="\u@\h:\W $ "
+# export PS1="\u@\h:\W $ "
 # export PS1="┌─[\[\e[01;32m\]\u\[\e[00m\]@\[\e[01;32m\]\h\[\e[00m\]:\[\e[1;34m\]\w\[\e[0m\]]\n└─╼ "
-# export PS1="\[\e[01;32m\]\u\[\e[00m\]@\[\e[01;32m\]\h\[\e[00m\]:\[\e[1;34m\]\W\[\e[0m\]$ "
+export PS1="\[\e[01;32m\]\u\[\e[00m\]@\[\e[01;32m\]\h\[\e[00m\]:\[\e[1;34m\]\W\[\e[0m\]$ "
 # export PS1="\e[1;32m\]\w\[\e[0m\] ⇥ "
