@@ -77,10 +77,10 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
-(setq c-default-style "linux")
 (setq c-basic-offset 4)
 (setq c-basic-indent 4)
 (c-set-offset 'comment-intro 0)
+
 
 ;; Python mode specific settings
 (add-hook 'python-mode-hook
@@ -138,6 +138,8 @@
 (setq org-hide-emphasis-markers t) ;; Hide the emphasis markers
 (setq org-pretty-entities t) ;; enable rendering of special symbols
 (setq org-image-actual-width nil)
+(setq org-startup-folded t)  ;; fold all headers when starting
+(setq org-startup-with-latex-preview t) ;; startup with latex preview
 
 ;; set custom todo keywords
  (setq org-todo-keywords
@@ -176,3 +178,7 @@
 (font-lock-add-keywords 'org-mode
                         '(("^ *\\([-]\\) "
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+
+;; Change the font size of latex fragment (math) rendering
+(require 'org)
+(setq org-format_latex-options  (plist-put org-format-latex-options :scale 1.5))

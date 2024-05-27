@@ -48,7 +48,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
 # Make terminal title bar disappear
-# gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
+gsettings set org.gnome.Terminal.Legacy.Settings headerbar true
 
 # Load mpi
 # module load mpi/mpich-$arch
