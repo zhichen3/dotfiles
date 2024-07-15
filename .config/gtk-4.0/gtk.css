@@ -39,7 +39,7 @@ define variables for them in _colors.scss */
 @define-color window_fg_color #11111b;
 
 /* Views - e.g. text view or tree view */
-@define-color view_bg_color rgba(239, 241, 245, 0.2);
+@define-color view_bg_color rgba(239, 241, 245, 1.0);
 @define-color view_fg_color #11111b;
 
 /* Header bar, search bar, tab bar */
@@ -511,4 +511,3 @@ switch:checked > slider {
   background-color: #eff1f5;
   color: #eff1f5;
 }
-
