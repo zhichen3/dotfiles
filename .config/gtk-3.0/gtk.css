@@ -2,9 +2,9 @@
 @import url('/home/zhi/.local/share/gnome-shell/extensions/unite@hardpixel.eu/styles/gtk3/buttons-right/always.css');
 /* windowDecorations UNITE */
 
-VteTerminal
-TerminalScreen,
-vte-terminal {
-    padding: 40px 30px 30px 30px;
-    -VteTerminal-inner-border: 40px 30px 30px 30px;
-}
+/* VteTerminal */
+/* TerminalScreen, */
+/* vte-terminal { */
+/*     padding: 40px 30px 30px 30px; */
+/*     -VteTerminal-inner-border: 40px 30px 30px 30px; */
+/* } */

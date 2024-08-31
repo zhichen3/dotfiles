@@ -41,18 +41,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-
- (set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
-
- ;; Set the fixed pitch face
- (set-face-attribute 'fixed-pitch nil :font "Fira Code Retina" :height 120)
-
- ;; Set the variable pitch face
- (set-face-attribute 'variable-pitch nil :font "Fira Code" :height 120 :weight 'regular)
  '(org-level-1 ((t (:family "Fira Code" :height 1.3))))
  '(org-level-2 ((t (:family "Fira Code" :height 1.2))))
  '(org-level-3 ((t (:family "Fira Code" :height 1.15))))
- '(org-level-4 ((t (:family "Fira Code" :height 1.10))))
+ '(org-level-4 ((t (:family "Fira Code" :height 1.1))))
  '(org-level-5 ((t (:family "Fira Code" :height 1.05))))
  '(org-level-6 ((t (:family "Fira Code" :height 1.0))))
  '(org-level-7 ((t (:family "Fira Code" :height 1.0))))
