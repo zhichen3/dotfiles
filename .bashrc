@@ -50,6 +50,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # Make terminal title bar disappear
 # gsettings set org.gnome.Terminal.Legacy.Settings headerbar true
 
+# Use redhat in mate menubar
+gsettings set org.mate.panel.menubar icon-name 'redhat-icon-panel-menu'
+
 # Load mpi
 # module load mpi/mpich-$arch
 

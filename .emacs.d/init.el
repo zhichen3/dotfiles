@@ -1,5 +1,5 @@
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'catppuccin t)
+;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;; (load-theme 'catppuccin t)
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -85,7 +85,7 @@
 ;; Delete trailing white space
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; Enable global whitespace mode
+;; Disable global whitespace mode
 (global-whitespace-mode 1)
 
 ;; Whitespace mode settings
@@ -98,11 +98,23 @@
         ;; all numbers are unicode codepoint in decimal. e.g. (insert-char 182 1)
         '(
           (space-mark 32 [183] [46]) ; SPACE 32 「 」, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
-          (newline-mark 10 [8629 10]) ; LINE FEED,
+          (newline-mark 10 [8617 10]) ; LINE FEED, 8629
           (tab-mark 9 [8677 9] [92 9]) ; tab
           )
         )
   )
+
+;; Change whitespace face colors
+(custom-set-faces
+ '(whitespace-space ((t (:background "##FFFFFF" :foreground "#BABDB6"))))
+ '(whitespace-tab ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
+ '(whitespace-newline ((t (:background "##FFFFFF" :foreground "#BABDB6"))))
+ '(whitespace-trailing ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
+ '(whitespace-line ((t (:background "#333333"))))
+ ;; '(whitespace-space-after-tab ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
+ ;; '(whitespace-indentation ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
+ ;; '(whitespace-empty ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
+ )
 
 ;; enable upcase-region
 (put 'upcase-region 'disabled nil)

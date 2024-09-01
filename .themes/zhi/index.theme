@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=zhi
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=Bluecurve-Gnome
+MetacityTheme=Atlanta
+IconTheme=Bluecurve
+GtkColorScheme=
+CursorTheme=Hackneyed
+CursorSize=24
