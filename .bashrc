@@ -29,6 +29,8 @@ unset rc
 alias rm="rm -i"
 alias mv="mv -i"
 
+alias emacs="emacs-lucid"
+
 #For pfetch
 
 export PF_COL1=3

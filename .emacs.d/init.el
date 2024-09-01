@@ -59,7 +59,7 @@
   (setq column-number-mode t))
 
 (when (not (display-graphic-p))
-  (menu-bar-mode 1)
+  (menu-bar-mode 0)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (global-display-line-numbers-mode)

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=zhi
+Name=myTheme
 Type=X-GNOME-Metatheme
 Comment=
 
@@ -9,4 +9,4 @@ MetacityTheme=Atlanta
 IconTheme=Bluecurve
 GtkColorScheme=
 CursorTheme=Hackneyed
-CursorSize=24
+CursorSize=36
