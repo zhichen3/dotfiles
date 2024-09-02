@@ -1,5 +1,6 @@
-;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;; (load-theme 'catppuccin t)
+;; (load-theme 'zenburn t)
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -85,8 +86,12 @@
 ;; Delete trailing white space
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; Disable global whitespace mode
+;; Enable global whitespace mode
 (global-whitespace-mode 1)
+
+;; Disable highlight when line is over 80 characters
+;; set nil to a number if want highlight over arbitrary # characters
+(setq whitespace-line-column nil)
 
 ;; Whitespace mode settings
 (progn
@@ -116,6 +121,7 @@
  ;; '(whitespace-empty ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
  )
 
+
 ;; enable upcase-region
 (put 'upcase-region 'disabled nil)
 
@@ -129,12 +135,29 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require 'rainbow-delimiters)
 
+;; Change rainbow-delimiter colors
+(custom-set-faces
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#EF2929"))))  ;; Red
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#FCAF3E"))))  ;; Orange
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#8AE234"))))  ;; Green
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#729FCF"))))  ;; Blue
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#AD7FA8"))))  ;; Magenta
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#FCE94F"))))  ;; Yellow
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "#8F5902"))))  ;; Brown
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "#A40000"))))  ;; Dark Red
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#CE5C00"))))  ;; Dark Orange
+ '(rainbow-delimiters-depth-10-face ((t (:foreground "#4E9A06"))))  ;; Dark Green
+ '(rainbow-delimiters-depth-11-face ((t (:foreground "#204A87"))))  ;; Dark Blue
+ '(rainbow-delimiters-depth-12-face ((t (:foreground "#5C3566"))))  ;; Dark Magenta
+ ;; Add more colors as needed for deeper levels
+ )
+
+
 ;; enable copy and paste to clipboard in emacs nw
 ;; Remember to install xclip for this
 (xclip-mode 1)
 
 ;; Remember to install eglot for this
-
 
 
 ;; Org mode
