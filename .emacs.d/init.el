@@ -64,6 +64,7 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (global-display-line-numbers-mode)
+  (xterm-mouse-mode)
   (setq column-number-mode t))
 
 ;; Set indent to space for c++
@@ -89,9 +90,8 @@
 ;; Enable global whitespace mode
 (global-whitespace-mode 1)
 
-;; Disable highlight when line is over 80 characters
-;; set nil to a number if want highlight over arbitrary # characters
-(setq whitespace-line-column nil)
+;; Change highlight when line is over 80 characters to 200
+(setq whitespace-line-column 200)
 
 ;; Whitespace mode settings
 (progn
