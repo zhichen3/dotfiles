@@ -111,10 +111,10 @@
 
 ;; Change whitespace face colors
 (custom-set-faces
- '(whitespace-space ((t (:background "##FFFFFF" :foreground "#BABDB6"))))
- '(whitespace-tab ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
- '(whitespace-newline ((t (:background "##FFFFFF" :foreground "#BABDB6"))))
- '(whitespace-trailing ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
+ '(whitespace-space ((t (:foreground "#BABDB6"))))
+ '(whitespace-tab ((t (:foreground "#FF6C6B"))))
+ '(whitespace-newline ((t (:foreground "#BABDB6"))))
+ '(whitespace-trailing ((t (:foreground "#FF6C6B"))))
  '(whitespace-line ((t (:background "#333333"))))
  ;; '(whitespace-space-after-tab ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
  ;; '(whitespace-indentation ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
@@ -137,12 +137,12 @@
 
 ;; Change rainbow-delimiter colors
 (custom-set-faces
- '(rainbow-delimiters-depth-1-face ((t (:foreground "#EF2929"))))  ;; Red
- '(rainbow-delimiters-depth-2-face ((t (:foreground "#FCAF3E"))))  ;; Orange
- '(rainbow-delimiters-depth-3-face ((t (:foreground "#8AE234"))))  ;; Green
- '(rainbow-delimiters-depth-4-face ((t (:foreground "#729FCF"))))  ;; Blue
- '(rainbow-delimiters-depth-5-face ((t (:foreground "#AD7FA8"))))  ;; Magenta
- '(rainbow-delimiters-depth-6-face ((t (:foreground "#FCE94F"))))  ;; Yellow
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#CC0000"))))  ;; Red
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#F57900"))))  ;; Orange
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#73D216"))))  ;; Green
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#3465A4"))))  ;; Blue
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#75507B"))))  ;; Magenta
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#EDD400"))))  ;; Yellow
  '(rainbow-delimiters-depth-7-face ((t (:foreground "#8F5902"))))  ;; Brown
  '(rainbow-delimiters-depth-8-face ((t (:foreground "#A40000"))))  ;; Dark Red
  '(rainbow-delimiters-depth-9-face ((t (:foreground "#CE5C00"))))  ;; Dark Orange
