@@ -51,7 +51,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # gsettings set org.gnome.Terminal.Legacy.Settings headerbar true
 
 # Use redhat in mate menubar
-gsettings set org.mate.panel.menubar icon-name 'redhat-icon-panel-menu'
+if [[ "${DESKTOP_SESSION}" == "mate" ]]; then
+    gsettings set org.mate.panel.menubar icon-name 'redhat-icon-panel-menu'
+fi
+
 
 # change terminal prompt
 # export PS1="\u@\h:\W $ "
