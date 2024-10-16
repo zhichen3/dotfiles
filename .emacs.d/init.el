@@ -49,7 +49,24 @@
  '(org-level-5 ((t (:family "Fira Code" :height 1.05))))
  '(org-level-6 ((t (:family "Fira Code" :height 1.0))))
  '(org-level-7 ((t (:family "Fira Code" :height 1.0))))
- '(org-level-8 ((t (:family "Fira Code" :height 1.0)))))
+ '(org-level-8 ((t (:family "Fira Code" :height 1.0))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#CC0000"))))
+ '(rainbow-delimiters-depth-10-face ((t (:foreground "#4E9A06"))))
+ '(rainbow-delimiters-depth-11-face ((t (:foreground "#204A87"))))
+ '(rainbow-delimiters-depth-12-face ((t (:foreground "#5C3566"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#F57900"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#73D216"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#3465A4"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#75507B"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#EDD400"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "#8F5902"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "#A40000"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#CE5C00"))))
+ '(whitespace-line ((t (:background "#333333"))))
+ '(whitespace-newline ((t (:foreground "#BABDB6"))))
+ '(whitespace-space ((t (:foreground "#BABDB6"))))
+ '(whitespace-tab ((t (:foreground "#FF6C6B"))))
+ '(whitespace-trailing ((t (:foreground "#FF6C6B")))))
 
 
 (when (display-graphic-p)
@@ -110,16 +127,7 @@
   )
 
 ;; Change whitespace face colors
-(custom-set-faces
- '(whitespace-space ((t (:foreground "#BABDB6"))))
- '(whitespace-tab ((t (:foreground "#FF6C6B"))))
- '(whitespace-newline ((t (:foreground "#BABDB6"))))
- '(whitespace-trailing ((t (:foreground "#FF6C6B"))))
- '(whitespace-line ((t (:background "#333333"))))
- ;; '(whitespace-space-after-tab ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
- ;; '(whitespace-indentation ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
- ;; '(whitespace-empty ((t (:background "##FFFFFF" :foreground "#FF6C6B"))))
- )
+
 
 
 ;; enable upcase-region
@@ -136,21 +144,7 @@
 (require 'rainbow-delimiters)
 
 ;; Change rainbow-delimiter colors
-(custom-set-faces
- '(rainbow-delimiters-depth-1-face ((t (:foreground "#CC0000"))))  ;; Red
- '(rainbow-delimiters-depth-2-face ((t (:foreground "#F57900"))))  ;; Orange
- '(rainbow-delimiters-depth-3-face ((t (:foreground "#73D216"))))  ;; Green
- '(rainbow-delimiters-depth-4-face ((t (:foreground "#3465A4"))))  ;; Blue
- '(rainbow-delimiters-depth-5-face ((t (:foreground "#75507B"))))  ;; Magenta
- '(rainbow-delimiters-depth-6-face ((t (:foreground "#EDD400"))))  ;; Yellow
- '(rainbow-delimiters-depth-7-face ((t (:foreground "#8F5902"))))  ;; Brown
- '(rainbow-delimiters-depth-8-face ((t (:foreground "#A40000"))))  ;; Dark Red
- '(rainbow-delimiters-depth-9-face ((t (:foreground "#CE5C00"))))  ;; Dark Orange
- '(rainbow-delimiters-depth-10-face ((t (:foreground "#4E9A06"))))  ;; Dark Green
- '(rainbow-delimiters-depth-11-face ((t (:foreground "#204A87"))))  ;; Dark Blue
- '(rainbow-delimiters-depth-12-face ((t (:foreground "#5C3566"))))  ;; Dark Magenta
- ;; Add more colors as needed for deeper levels
- )
+
 
 
 ;; enable copy and paste to clipboard in emacs nw
