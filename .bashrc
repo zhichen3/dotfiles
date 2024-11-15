@@ -35,6 +35,7 @@ alias emacs="emacs-lucid"
 export AMREX_HOME=~/Github/amrex
 export MICROPHYSICS_HOME=~/Github/Microphysics
 export CASTRO_HOME=~/Github/Castro
+export AMREX_HYPRE_HOME=~/Github/hypre-2.26.0/src/hypre
 
 # Automatically set CUDA_PATH to the latest version if there is one.
 CUDA_DIRS=$(ls -d /usr/local/cuda-* 2>/dev/null)
@@ -61,3 +62,5 @@ fi
 # export PS1="┌─[\[\e[01;32m\]\u\[\e[00m\]@\[\e[01;32m\]\h\[\e[00m\]:\[\e[1;34m\]\w\[\e[0m\]]\n└─╼ "
 export PS1="\[\e[01;32m\]\u\[\e[00m\]@\[\e[01;32m\]\h\[\e[00m\]:\[\e[1;34m\]\W\[\e[0m\]$ "
 # export PS1="\e[1;32m\]\w\[\e[0m\] ⇥ "
+
+export TERM=xterm-256color
