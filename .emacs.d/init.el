@@ -74,6 +74,7 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (global-display-line-numbers-mode)
+  (which-function-mode)
   (setq column-number-mode t))
 
 (when (not (display-graphic-p))
@@ -82,6 +83,7 @@
   (scroll-bar-mode -1)
   (global-display-line-numbers-mode)
   (xterm-mouse-mode)
+  (which-function-mode)
   (setq column-number-mode t))
 
 ;; Set indent to space for c++
