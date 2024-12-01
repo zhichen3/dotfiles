@@ -25,6 +25,9 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+;; Change font to Fira Code, size 14
+
+(set-face-attribute 'default nil :font "Fira Code-14")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -180,13 +183,26 @@
 (setq org-todo-keyword-faces
       '(("TODO" . "orange")
         ("MAYBE" . "mistyrose4")
-        ("NEXT" . "blueviolet")
-        ("IN-PROGRESS" . "beige")
-        ("REPORT" . "cyan1")
-        ("DONE" .  "mediumspringgreen")
+        ("NEXT" . "darkviolet")
+        ("IN-PROGRESS" . "gray15")
+        ("REPORT" . "sienna4")
+        ("DONE" .  "limegreen")
         ("DEFERRED" . "chocolate")
         ("CANCELLED" . "red3"))
  )
+
+(with-eval-after-load 'org
+  ;; Change color for all heading levels
+  (set-face-foreground 'org-level-1 "midnightblue")
+  (set-face-foreground 'org-level-2 "navy")
+  (set-face-foreground 'org-level-3 "mediumblue")
+  (set-face-foreground 'org-level-4 "blue")
+  (set-face-foreground 'org-level-5 "midnightblue")
+  (set-face-foreground 'org-level-6 "navy")
+  (set-face-foreground 'org-level-7 "mediumblue")
+  (set-face-foreground 'org-level-8 "blue")
+)
+
 
 (load "~/.emacs.d/org-bullets.el")
 (require 'org-bullets) ;; Change the bullets
