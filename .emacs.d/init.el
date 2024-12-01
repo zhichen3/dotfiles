@@ -72,6 +72,10 @@
  '(whitespace-trailing ((t (:foreground "#FF6C6B")))))
 
 
+; Set window size for graphics emacs mode
+(setq initial-frame-alist '((width . 99) (height . 40)))  ; Set size of the first window
+(setq default-frame-alist '((width . 99) (height . 40)))  ; Set size for all subsequent windows
+
 (when (display-graphic-p)
   (menu-bar-mode 1)
   (tool-bar-mode -1)
