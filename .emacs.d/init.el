@@ -29,6 +29,9 @@
 
 (set-face-attribute 'default nil :font "Fira Code-14")
 
+;; Change font size to 14pt
+;; (set-face-attribute 'default nil :height 140)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -136,9 +139,6 @@
         )
   )
 
-;; Change whitespace face colors
-
-
 
 ;; enable upcase-region
 (put 'upcase-region 'disabled nil)
@@ -153,9 +153,6 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require 'rainbow-delimiters)
 
-;; Change rainbow-delimiter colors
-
-
 
 ;; enable copy and paste to clipboard in emacs nw
 ;; Remember to install xclip for this
@@ -163,14 +160,17 @@
 
 ;; Remember to install eglot for this
 
-
+;;
 ;; Org mode
+;;
+
 (setq org-ellipsis " ▼")    ;; change the ... behavior for headings
 (setq org-hide-emphasis-markers t) ;; Hide the emphasis markers
 (setq org-pretty-entities t) ;; enable rendering of special symbols
 (setq org-image-actual-width nil)
 (setq org-startup-folded t)  ;; fold all headers when starting
 (setq org-startup-with-latex-preview t) ;; startup with latex preview
+
 
 ;; set custom todo keywords
  (setq org-todo-keywords
@@ -195,6 +195,15 @@
         ("CANCELLED" . "red3"))
  )
 
+;; change behavior of different text emphasis
+(setq org-emphasis-alist
+  '(("*" (bold :foreground "black" ))
+    ("/" italic)
+    ("_" underline)
+    ("=" (:background "maroon" :foreground "white"))
+    ("~" (:background "yellow" :foreground "black"))
+    ("+" (:strike-through t))))
+
 (with-eval-after-load 'org
   ;; Change color for all heading levels
   (set-face-foreground 'org-level-1 "midnightblue")
@@ -208,6 +217,20 @@
 )
 
 
+;; Allow temporarily showing pretty-entities, emphasis markers, and etc
+;; when cursor is near them
+(load "~/.emacs.d/org-appear.el")
+(require 'org-appear)
+(add-hook 'org-mode-hook (lambda () (org-appear-mode 1)))
+;; By default only emphasis markers are toggled, now enable other
+(setq org-appear-autoemphasis t) ;; enable toggling of emphasis markers
+(setq org-appear-autosubmarkers t) ;; enable toggling of subscript and superscript markers
+(setq org-appear-autoentities t) ;; enable toggling of pretty-entities rendering
+(setq org-appear-autolinks t) ;; enable toggling of links
+(setq org-appear-inside-latex t) ;; enable toggling inside latex fragments
+
+
+;; Change different bullets
 (load "~/.emacs.d/org-bullets.el")
 (require 'org-bullets) ;; Change the bullets
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
