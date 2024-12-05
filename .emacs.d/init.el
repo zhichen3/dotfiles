@@ -225,4 +225,4 @@
 
 ;; Change the font size of latex fragment (math) rendering
 (require 'org)
-(setq org-format_latex-options  (plist-put org-format-latex-options :scale 1.5))
+(setq org-format_latex-options  (plist-put org-format-latex-options :scale 2.0))

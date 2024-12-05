@@ -37,6 +37,9 @@ export MICROPHYSICS_HOME=~/Github/Microphysics
 export CASTRO_HOME=~/Github/Castro
 export AMREX_HYPRE_HOME=~/Github/hypre-2.26.0/src/hypre
 
+# set WINEPREFIX
+export WINEPREFIX=$HOME/.wine
+
 # Automatically set CUDA_PATH to the latest version if there is one.
 CUDA_DIRS=$(ls -d /usr/local/cuda-* 2>/dev/null)
 if [ -n "$CUDA_DIRS" ]; then
