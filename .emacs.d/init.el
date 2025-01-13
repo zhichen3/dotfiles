@@ -170,7 +170,7 @@
 (setq org-image-actual-width nil)
 (setq org-startup-folded t)  ;; fold all headers when starting
 (setq org-startup-with-latex-preview t) ;; startup with latex preview
-
+(setq org-use-sub-superscripts '{}) ;; doesn't allow rendering with a_b or a^b but must with a_{b} and a^{b}
 
 ;; set custom todo keywords
  (setq org-todo-keywords

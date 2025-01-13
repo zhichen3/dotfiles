@@ -39,6 +39,7 @@ export AMREX_HYPRE_HOME=~/Github/hypre-2.26.0/src/hypre
 
 # set WINEPREFIX
 export WINEPREFIX=$HOME/.wine
+export DXVK_HUD=devinfo,fps
 
 # Automatically set CUDA_PATH to the latest version if there is one.
 CUDA_DIRS=$(ls -d /usr/local/cuda-* 2>/dev/null)
@@ -54,9 +55,11 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # Make terminal title bar disappear
 # gsettings set org.gnome.Terminal.Legacy.Settings headerbar true
 
-# Use redhat in mate menubar
 if [[ "${DESKTOP_SESSION}" == "mate" ]]; then
+    # Use redhat in mate menubar
     gsettings set org.mate.panel.menubar icon-name 'redhat-icon-panel-menu'
+    # set emacs global keybindings
+    gsettings set org.mate.interface gtk-key-theme 'Emacs'
 fi
 
 
