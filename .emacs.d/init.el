@@ -11,7 +11,7 @@
 
 
 ; list the packages you want
-(setq package-list '(xclip company eglot))
+(setq package-list '(xclip company eglot markdown-mode))
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
