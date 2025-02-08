@@ -11,7 +11,7 @@
 
 
 ; list the packages you want
-(setq package-list '(xclip company eglot markdown-mode))
+(setq package-list '(xclip company eglot markdown-mode ox-hugo))
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
@@ -25,9 +25,10 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-;; Change font to Fira Code, size 14
+;; Change font size 14
 
-(set-face-attribute 'default nil :font "Fira Code-14")
+;; (set-face-attribute 'default nil :font "Fira Code-14")
+(set-face-attribute 'default nil :font "JetBrains Mono-13")
 
 ;; Change font size to 14pt
 ;; (set-face-attribute 'default nil :height 140)
@@ -48,14 +49,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-level-1 ((t (:family "Fira Code" :height 1.3))))
- '(org-level-2 ((t (:family "Fira Code" :height 1.2))))
- '(org-level-3 ((t (:family "Fira Code" :height 1.15))))
- '(org-level-4 ((t (:family "Fira Code" :height 1.1))))
- '(org-level-5 ((t (:family "Fira Code" :height 1.05))))
- '(org-level-6 ((t (:family "Fira Code" :height 1.0))))
- '(org-level-7 ((t (:family "Fira Code" :height 1.0))))
- '(org-level-8 ((t (:family "Fira Code" :height 1.0))))
+ '(org-level-1 ((t (:family "JetBrains Mono" :height 1.3))))
+ '(org-level-2 ((t (:family "JetBrains Mono" :height 1.2))))
+ '(org-level-3 ((t (:family "JetBrains Mono" :height 1.15))))
+ '(org-level-4 ((t (:family "JetBrains Mono" :height 1.1))))
+ '(org-level-5 ((t (:family "JetBrains Mono" :height 1.05))))
+ '(org-level-6 ((t (:family "JetBrains Mono" :height 1.0))))
+ '(org-level-7 ((t (:family "JetBrains Mono" :height 1.0))))
+ '(org-level-8 ((t (:family "JetBrains Mono" :height 1.0))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#CC0000"))))
  '(rainbow-delimiters-depth-10-face ((t (:foreground "#4E9A06"))))
  '(rainbow-delimiters-depth-11-face ((t (:foreground "#204A87"))))
@@ -76,8 +77,8 @@
 
 
 ; Set window size for graphics emacs mode
-(setq initial-frame-alist '((width . 99) (height . 40)))  ; Set size of the first window
-(setq default-frame-alist '((width . 99) (height . 40)))  ; Set size for all subsequent windows
+;; (setq initial-frame-alist '((width . 88) (height . 40)))  ; Set size of the first window
+;; (setq default-frame-alist '((width . 88) (height . 40)))  ; Set size for all subsequent windows
 
 (when (display-graphic-p)
   (menu-bar-mode 1)
@@ -152,6 +153,19 @@
 (load "~/.emacs.d/rainbow-delimiters.el")
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (require 'rainbow-delimiters)
+
+;; ox-hugo related configs:
+
+;; in order to get export options
+(with-eval-after-load 'ox
+  (require 'ox-hugo))
+
+;; auto-export on save
+(defun my/org-hugo-export-on-save ()
+  (when (derived-mode-p 'org-mode)
+    (org-hugo-export-wim-to-md)))
+
+(add-hook 'after-save-hook 'my/org-hugo-export-on-save)
 
 
 ;; enable copy and paste to clipboard in emacs nw
