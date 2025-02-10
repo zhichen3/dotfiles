@@ -23,9 +23,13 @@
 ; install the missing packages
 (dolist (package package-list)
   (unless (package-installed-p package)
-    (package-install package)))
+    (condition-case nil
+        (package-install package)
+      (error  ;; If package isn't found, refresh and try again
+       (package-refresh-contents)
+       (package-install package)))))
 
-;; Change font size 14
+;; Change fonts
 
 ;; (set-face-attribute 'default nil :font "Fira Code-14")
 (set-face-attribute 'default nil :font "JetBrains Mono-13")
