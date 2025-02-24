@@ -9,7 +9,6 @@
                          ("org" . "https://orgmode.org/elpa/")
                          ("melpa" . "https://melpa.org/packages/")))
 
-
 ; list the packages you want
 (setq package-list '(xclip company eglot markdown-mode ox-hugo))
 
@@ -45,7 +44,7 @@
  '(column-number-mode t)
  '(global-display-line-numbers-mode t)
  '(inhibit-startup-screen t)
- '(package-selected-packages '(company eglot xclip))
+ '(package-selected-packages '(quelpa company eglot xclip))
  '(tool-bar-mode nil)
  '(warning-suppress-types '((emacs))))
 (custom-set-faces
