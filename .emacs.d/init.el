@@ -1,32 +1,38 @@
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;; uncomment to run profiler in init.el
+;; (profiler-start 'cpu)
+
+;; add theme to path
+;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;; (load-theme 'catppuccin t)
-;; (load-theme 'zenburn t)
 
-; list the repositories containing them
-(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")
-                         ("gnu-devel" . "http://elpa.gnu.org/devel/")
-                         ("org" . "https://orgmode.org/elpa/")
-                         ("melpa" . "https://melpa.org/packages/")))
+;; The following is used to install missing packages.
+;; Uncomment to install
 
-; list the packages you want
-(setq package-list '(xclip company eglot markdown-mode ox-hugo))
+;; ; list the repositories containing them
+;; (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+;;                          ("gnu" . "http://elpa.gnu.org/packages/")
+;;                          ("gnu-devel" . "http://elpa.gnu.org/devel/")
+;;                          ("org" . "https://orgmode.org/elpa/")
+;;                          ("melpa" . "https://melpa.org/packages/")))
 
-; activate all the packages (in particular autoloads)
+;; ; list the packages you want
+;; (setq package-list '(xclip company eglot markdown-mode ox-hugo))
+
+;; fetch the list of packages available
+;; (unless package-archive-contents
+;;   (package-refresh-contents))
+
+;; ; install the missing packages
+;; (dolist (package package-list)
+;;   (unless (package-installed-p package)
+;;     (condition-case nil
+;;         (package-install package)
+;;       (error  ;; If package isn't found, refresh and try again
+;;        (package-refresh-contents)
+;;        (package-install package)))))
+
+;; activate all the packages (in particular autoloads)
 (package-initialize)
-
-; fetch the list of packages available
-(unless package-archive-contents
-  (package-refresh-contents))
-
-; install the missing packages
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (condition-case nil
-        (package-install package)
-      (error  ;; If package isn't found, refresh and try again
-       (package-refresh-contents)
-       (package-install package)))))
 
 ;; Change fonts
 
@@ -163,7 +169,7 @@
 (with-eval-after-load 'ox
   (require 'ox-hugo))
 
-;; auto-export on save
+;; auto-export on save with ox-hugo
 (defun my/org-hugo-export-on-save ()
   (when (derived-mode-p 'org-mode)
     (org-hugo-export-wim-to-md)))
@@ -184,7 +190,7 @@
 (setq org-ellipsis " ▼")    ;; change the ... behavior for headings
 (setq org-hide-emphasis-markers t) ;; Hide the emphasis markers
 (setq org-pretty-entities t) ;; enable rendering of special symbols
-(setq org-image-actual-width nil)
+(setq org-image-actual-width nil) ;; allow change image width
 (setq org-startup-folded t)  ;; fold all headers when starting
 (setq org-startup-with-latex-preview t) ;; startup with latex preview
 (setq org-use-sub-superscripts '{}) ;; doesn't allow rendering with a_b or a^b but must with a_{b} and a^{b}
@@ -221,16 +227,17 @@
     ("~" (:background "yellow" :foreground "black"))
     ("+" (:strike-through t))))
 
+
 (with-eval-after-load 'org
   ;; Change color for all heading levels
-  (set-face-foreground 'org-level-1 "midnightblue")
-  (set-face-foreground 'org-level-2 "navy")
-  (set-face-foreground 'org-level-3 "mediumblue")
-  (set-face-foreground 'org-level-4 "blue")
-  (set-face-foreground 'org-level-5 "midnightblue")
-  (set-face-foreground 'org-level-6 "navy")
-  (set-face-foreground 'org-level-7 "mediumblue")
-  (set-face-foreground 'org-level-8 "blue")
+  (set-face-foreground 'org-level-1 "royalblue3")
+  (set-face-foreground 'org-level-2 "royalblue2")
+  (set-face-foreground 'org-level-3 "royalblue1")
+  (set-face-foreground 'org-level-4 "dodgerblue3")
+  (set-face-foreground 'org-level-5 "dodgerblue2")
+  (set-face-foreground 'org-level-6 "dodgerblue1")
+  (set-face-foreground 'org-level-7 "deepskyblue2")
+  (set-face-foreground 'org-level-8 "deepskyblue1")
 )
 
 
@@ -266,3 +273,10 @@
 ;; Change the font size of latex fragment (math) rendering
 (require 'org)
 (setq org-format_latex-options  (plist-put org-format-latex-options :scale 2.0))
+
+
+;; uncomment to run profiler in init.el
+;; (add-hook 'emacs-startup-hook
+;;           (lambda ()
+;;             (profiler-report)
+;;             (profiler-stop)))
