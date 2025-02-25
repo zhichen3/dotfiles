@@ -153,10 +153,14 @@
 ;; enable upcase-region
 (put 'upcase-region 'disabled nil)
 
+
 ;; load highlight-indent-guides.el and enable by default
 (load "~/.emacs.d/highlight-indent-guides.el")
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(setq highlight-indent-guides-method 'character)
+(setq highlight-indent-guides-suppress-auto-error t)
 (require 'highlight-indent-guides)
+
 
 ;; load rainbow-delimiters.el
 (load "~/.emacs.d/rainbow-delimiters.el")
