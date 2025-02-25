@@ -192,7 +192,7 @@
 (setq org-pretty-entities t) ;; enable rendering of special symbols
 (setq org-image-actual-width nil) ;; allow change image width
 (setq org-startup-folded t)  ;; fold all headers when starting
-(setq org-startup-with-latex-preview t) ;; startup with latex preview
+;; (setq org-startup-with-latex-preview t) ;; startup with latex preview
 (setq org-use-sub-superscripts '{}) ;; doesn't allow rendering with a_b or a^b but must with a_{b} and a^{b}
 
 ;; set custom todo keywords
