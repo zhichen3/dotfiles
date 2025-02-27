@@ -282,6 +282,16 @@
 (setq org-format_latex-options  (plist-put org-format-latex-options :scale 2.0))
 
 
+;;;; emacs-eat setting
+
+;; default to eat-char-mode when using eat.
+;; This is full-terminal emulation mode
+(with-eval-after-load 'eat
+  (add-hook 'eat-exec-hook
+            (lambda (_) (eat-char-mode))))
+
+
+
 ;; uncomment to run profiler in init.el
 ;; (add-hook 'emacs-startup-hook
 ;;           (lambda ()
