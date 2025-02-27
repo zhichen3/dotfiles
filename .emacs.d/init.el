@@ -8,21 +8,27 @@
 ;; The following is used to install missing packages.
 ;; Uncomment to install
 
-;; ; list the repositories containing them
+
+;; ;; list the repositories containing them
 ;; (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
 ;;                          ("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("gnu-devel" . "http://elpa.gnu.org/devel/")
 ;;                          ("org" . "https://orgmode.org/elpa/")
-;;                          ("melpa" . "https://melpa.org/packages/")))
+;;                          ("melpa" . "https://melpa.org/packages/")
+;;                          ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
 
-;; ; list the packages you want
-;; (setq package-list '(xclip company eglot markdown-mode ox-hugo))
+;; ;; activate all the packages (in particular autoloads)
+;; ;; seems like package-instailize is no longer needed after emacs 27
+;; ;; (package-initialize)
 
-;; fetch the list of packages available
+;; ;; list the packages you want
+;; (setq package-list '(xclip company eglot markdown-mode ox-hugo eat))
+
+;; ;;fetch the list of packages available
 ;; (unless package-archive-contents
 ;;   (package-refresh-contents))
 
-;; ; install the missing packages
+;; ;; install the missing packages
 ;; (dolist (package package-list)
 ;;   (unless (package-installed-p package)
 ;;     (condition-case nil
@@ -30,9 +36,6 @@
 ;;       (error  ;; If package isn't found, refresh and try again
 ;;        (package-refresh-contents)
 ;;        (package-install package)))))
-
-;; activate all the packages (in particular autoloads)
-(package-initialize)
 
 ;; Change fonts
 
@@ -50,7 +53,7 @@
  '(column-number-mode t)
  '(global-display-line-numbers-mode t)
  '(inhibit-startup-screen t)
- '(package-selected-packages '(quelpa company eglot xclip))
+ '(package-selected-packages '(eat quelpa company eglot xclip))
  '(tool-bar-mode nil)
  '(warning-suppress-types '((emacs))))
 (custom-set-faces
