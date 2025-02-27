@@ -58,4 +58,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export PS1="\[\e[01;32m\]\u\[\e[00m\]@\[\e[01;32m\]\h\[\e[00m\]:\[\e[1;34m\]\W\[\e[0m\]$ "
 # export PS1="\e[1;32m\]\w\[\e[0m\] ⇥ "
 
+### enable more color in terminal mode?
 export TERM=xterm-256color
+
+### Allow bash integration into eshell
+[ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \
+  source "$EAT_SHELL_INTEGRATION_DIR/bash"

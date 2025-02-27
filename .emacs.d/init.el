@@ -290,7 +290,12 @@
   (add-hook 'eat-exec-hook
             (lambda (_) (eat-char-mode))))
 
+;; For `eat-eshell-mode'. Use eat within eshell to allow
+;; running full-screen programs
+(add-hook 'eshell-load-hook #'eat-eshell-mode)
 
+;; For `eat-eshell-visual-command-mode'.
+(add-hook 'eshell-load-hook #'eat-eshell-visual-command-mode)
 
 ;; uncomment to run profiler in init.el
 ;; (add-hook 'emacs-startup-hook
