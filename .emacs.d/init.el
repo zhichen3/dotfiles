@@ -297,6 +297,15 @@
 ;; For `eat-eshell-visual-command-mode'.
 (add-hook 'eshell-load-hook #'eat-eshell-visual-command-mode)
 
+;; make-shell function to create a different eshell instance
+(defun make-shell (name)
+  "Create a shell buffer named NAME."
+  (interactive "sName: ")
+  (setq name (concat "$" name))
+  (eshell)
+  (rename-buffer name))
+
+
 ;; uncomment to run profiler in init.el
 ;; (add-hook 'emacs-startup-hook
 ;;           (lambda ()
