@@ -94,7 +94,7 @@
 
 (when (display-graphic-p)
   (menu-bar-mode 1)
-  (tool-bar-mode -1)
+  (tool-bar-mode 1)   ;; -1 to disable tool-bar-mode
   (scroll-bar-mode 1)
   (set-scroll-bar-mode 'right)
   (global-display-line-numbers-mode)

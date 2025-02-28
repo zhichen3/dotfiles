@@ -1,0 +1,4 @@
+alias emacs emacs-lucid $*
+alias rm rm -i $*
+alias mv mv -i $*
+alias config /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $*
