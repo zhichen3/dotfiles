@@ -20,3 +20,10 @@ evdev:input:b0011v0001p0001eAB54-*
     KEYBOARD_KEY_1d=capslock
     KEYBOARD_KEY_2b=backspace
     KEYBOARD_KEY_0e=backslash
+
+# NIZ 68 keyboard
+evdev:input:b0003v0483p5232e0110-*
+    KEYBOARD_KEY_70039=leftctrl
+    KEYBOARD_KEY_700e0=capslock
+    KEYBOARD_KEY_70031=backspace
+    KEYBOARD_KEY_7002a=backslash
