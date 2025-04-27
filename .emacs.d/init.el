@@ -22,7 +22,7 @@
 ;; ;; (package-initialize)
 
 ;; ;; list the packages you want
-;; (setq package-list '(xclip company eglot markdown-mode ox-hugo eat))
+;; (setq package-list '(xclip company eglot markdown-mode yaml-mode ox-hugo eat))
 
 ;; ;;fetch the list of packages available
 ;; (unless package-archive-contents
@@ -53,7 +53,7 @@
  '(column-number-mode t)
  '(global-display-line-numbers-mode t)
  '(inhibit-startup-screen t)
- '(package-selected-packages '(eat quelpa company eglot xclip))
+ '(package-selected-packages '(yaml-mode eat quelpa company eglot xclip))
  '(tool-bar-mode nil)
  '(warning-suppress-types '((emacs))))
 (custom-set-faces
@@ -281,6 +281,18 @@
 (require 'org)
 (setq org-format_latex-options  (plist-put org-format-latex-options :scale 2.0))
 
+;; This function auto updates \tag{}, which is used to label org mode math equations.
+(defun update-tag ()
+  (interactive)
+  (save-excursion
+    (goto-char (point-min))
+    (let ((count 1))
+      (while (re-search-forward "\\tag{\\([0-9]+\\)}" nil t)
+        (replace-match (format "%d" count) nil nil nil 1)
+        (setq count (1+ count)))))
+  )
+
+(add-hook 'before-save-hook 'update-tag)
 
 ;;;; emacs-eat setting
 
