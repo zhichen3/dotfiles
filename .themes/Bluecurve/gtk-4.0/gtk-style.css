@@ -102,7 +102,7 @@ window:selected {
 	color: @theme_selected_fg_color;
 }
 
-window:insensitive {
+window:disabled {
 	color: @insensitive_fg_color;
 	background-color: @insensitive_bg_color;
 }
@@ -366,9 +366,9 @@ item, popover modelbutton {
 	border: 1px solid transparent;
 }
 
-item:selected, 
-item:hover, 
-popover modelbutton:selected, 
+item:selected,
+item:hover,
+popover modelbutton:selected,
 popover modelbutton:hover {
 	background-image: linear-gradient(to bottom, @menuitem_top_color, @menuitem_bottom_color);
 	color: @theme_selected_fg_color;
@@ -376,7 +376,7 @@ popover modelbutton:hover {
 	box-shadow: inset 1px 1px @menuitem_light_color, inset -1px -1px @menuitem_dark_color;
 }
 
-item:selected > label, 
+item:selected > label,
 popover modelbutton:selected > label {
 	color: @theme_selected_fg_color;
 }
@@ -1324,5 +1324,3 @@ calendar {
 calendar:indeterminate {
 	color: @insensitive_fg_color;
 }
-
-
