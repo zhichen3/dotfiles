@@ -108,7 +108,7 @@ window:selected {
 	color: @theme_selected_fg_color;
 }
 
-window:insensitive {
+window:disabled {
 	color: @insensitive_fg_color;
 	background-color: @insensitive_bg_color;
 }
@@ -1291,5 +1291,3 @@ calendar {
 calendar:indeterminate {
 	color: @insensitive_fg_color;
 }
-
-
