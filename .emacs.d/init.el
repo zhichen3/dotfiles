@@ -183,6 +183,11 @@
 
 (add-hook 'after-save-hook 'my/org-hugo-export-on-save)
 
+;; Set auto copy images to static/ox-hugo
+(setq org-hugo-default-static-subdirectory-for-externals "ox-hugo")
+(setq org-hugo-external-file-extensions-allowed-for-copying
+      '("JPG" "PNG" "JPEG" "GIF" "SVG" "PDF"
+        "jpg" "jpeg" "png" "gif" "svg" "pdf"))
 
 ;; enable copy and paste to clipboard in emacs nw
 ;; Remember to install xclip for this
