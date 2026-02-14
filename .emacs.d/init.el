@@ -134,7 +134,7 @@
 (global-whitespace-mode 1)
 
 ;; Change highlight when line is over 80 characters to 200
-(setq whitespace-line-column 200)
+(setq whitespace-line-column 999)
 
 ;; Whitespace mode settings
 (progn
@@ -184,6 +184,7 @@
 (add-hook 'after-save-hook 'my/org-hugo-export-on-save)
 
 ;; Set auto copy images to static/ox-hugo
+;; This is done if image is outside of content tree
 (setq org-hugo-default-static-subdirectory-for-externals "ox-hugo")
 (setq org-hugo-external-file-extensions-allowed-for-copying
       '("JPG" "PNG" "JPEG" "GIF" "SVG" "PDF" "MP4"

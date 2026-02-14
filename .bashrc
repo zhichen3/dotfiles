@@ -44,7 +44,8 @@ export DXVK_HUD=devinfo,fps
 ### Automatically set CUDA_PATH to the latest version if there is one.
 CUDA_DIRS=$(ls -d /usr/local/cuda-* 2>/dev/null)
 if [ -n "$CUDA_DIRS" ]; then
-    CUDA_PATH=$(echo $CUDA_DIRS | tr ' ' '\n' | sort -V | tail -n 1)
+    # CUDA_PATH=$(echo $CUDA_DIRS | tr ' ' '\n' | sort -V | tail -n 1)
+    CUDA_PATH="/usr/local/cuda"
     export CUDA_PATH
     export PATH=$CUDA_PATH/bin:$PATH
 fi
