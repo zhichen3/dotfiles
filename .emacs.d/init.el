@@ -64,15 +64,12 @@
  '(org-level-1 ((t (:family "JetBrains Mono" :height 1.3))))
  '(org-level-2 ((t (:family "JetBrains Mono" :height 1.2))))
  '(org-level-3 ((t (:family "JetBrains Mono" :height 1.15))))
- '(org-level-4 ((t (:family "JetBrains Mono" :height 1.1))))
+ '(org-level-4 ((t (:family "JetBrains Mono" :height 1.10))))
  '(org-level-5 ((t (:family "JetBrains Mono" :height 1.05))))
  '(org-level-6 ((t (:family "JetBrains Mono" :height 1.0))))
  '(org-level-7 ((t (:family "JetBrains Mono" :height 1.0))))
  '(org-level-8 ((t (:family "JetBrains Mono" :height 1.0))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "#CC0000"))))
- '(rainbow-delimiters-depth-10-face ((t (:foreground "#4E9A06"))))
- '(rainbow-delimiters-depth-11-face ((t (:foreground "#204A87"))))
- '(rainbow-delimiters-depth-12-face ((t (:foreground "#5C3566"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "#F57900"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "#73D216"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "#3465A4"))))
@@ -81,6 +78,9 @@
  '(rainbow-delimiters-depth-7-face ((t (:foreground "#8F5902"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "#A40000"))))
  '(rainbow-delimiters-depth-9-face ((t (:foreground "#CE5C00"))))
+ '(rainbow-delimiters-depth-10-face ((t (:foreground "#4E9A06"))))
+ '(rainbow-delimiters-depth-11-face ((t (:foreground "#204A87"))))
+ '(rainbow-delimiters-depth-12-face ((t (:foreground "#5C3566"))))
  '(whitespace-line ((t (:background "#333333"))))
  '(whitespace-newline ((t (:foreground "#BABDB6"))))
  '(whitespace-space ((t (:foreground "#BABDB6"))))
@@ -268,9 +268,9 @@
 
 
 ;; Change different bullets
-(load "~/.emacs.d/org-bullets.el")
-(require 'org-bullets) ;; Change the bullets
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(load "~/.emacs.d/org-superstar.el")
+(require 'org-superstar) ;; Change the bullets
+(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
 
 ;; allow visual line mode, auto break long lines of the current buffer
 (add-hook 'org-mode-hook 'visual-line-mode)
@@ -322,7 +322,6 @@
   (setq name (concat "$" name))
   (eshell)
   (rename-buffer name))
-
 
 ;; uncomment to run profiler in init.el
 ;; (add-hook 'emacs-startup-hook
