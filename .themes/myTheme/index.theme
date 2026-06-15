@@ -6,7 +6,7 @@ Comment=
 [X-GNOME-Metatheme]
 GtkTheme=Bluecurve-Gnome
 MetacityTheme=Atlanta
-IconTheme=Bluecurve
+IconTheme=mate
 GtkColorScheme=
-CursorTheme=Hackneyed
-CursorSize=40
+CursorTheme=DMZ-Red
+CursorSize=32
