@@ -52,6 +52,7 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(global-display-line-numbers-mode t)
+ '(global-tab-line-mode t)
  '(inhibit-startup-screen t)
  '(package-selected-packages '(yaml-mode eat quelpa company eglot xclip))
  '(tool-bar-mode nil)
@@ -207,6 +208,7 @@
 (setq org-startup-folded t)  ;; fold all headers when starting
 ;; (setq org-startup-with-latex-preview t) ;; startup with latex preview
 (setq org-use-sub-superscripts '{}) ;; doesn't allow rendering with a_b or a^b but must with a_{b} and a^{b}
+(setq org-export-with-toc t) ;; export org files table of content
 
 ;; set custom todo keywords
  (setq org-todo-keywords
